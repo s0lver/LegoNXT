@@ -1,0 +1,94 @@
+#define ENTRADA_US IN_4
+#define LIMITE 40
+#define UMBRAL_ERROR 2
+#define POTENCIA_MOTOR 50
+#define VOLUMEN 2
+
+bool en_reversa, en_reposo;
+
+task musica_reversa()
+{
+    while(en_reversa){
+        PlayToneEx(1245, 400, VOLUMEN, FALSE); 
+        Wait(1000);
+    }
+}
+
+inline void pillido(){
+    PlayToneEx(1045, 400, VOLUMEN, FALSE); 
+    Wait(100);
+    PlayToneEx(845, 400, VOLUMEN, FALSE); 
+}
+
+task musica_reposo(){
+    while(en_reposo){
+        pillido();
+        Wait(700);
+        
+        pillido();
+        Wait(1200);
+    }   
+}
+
+inline void imprimirDistancia(const int & distancia){
+    ClearScreen();
+    NumOut(0, 0, distancia);
+}
+
+inline void moverHaciaAtras(){
+    OnRev(OUT_BC, POTENCIA_MOTOR);
+    TextOut(0, 10, "Reversa ");
+
+    en_reversa = true;
+    en_reposo = false;
+    start musica_reversa;
+}
+
+inline void moverHaciaAdelante(){
+    OnFwd(OUT_BC, POTENCIA_MOTOR);
+    TextOut(0, 10, "Adelante ");
+
+    en_reversa = false;
+    en_reposo = false;    
+}
+
+inline void detener(){
+    TextOut(0, 10, "Detenido ");
+    Float(OUT_BC);
+    //Off(OUT_BC);
+
+    en_reversa = false;
+    en_reposo = true;
+    start musica_reposo;
+}
+
+task controlar_pollito(){
+    int distancia = 0;
+    
+    while(true){
+        distancia = SensorUS(ENTRADA_US);
+        
+        imprimirDistancia(distancia);
+		
+        if(distancia < (LIMITE - UMBRAL_ERROR)){
+            moverHaciaAtras();        
+        }
+        else if (distancia > (LIMITE + UMBRAL_ERROR)) {
+            moverHaciaAdelante();
+        }
+        else{
+            detener();
+        }
+    }
+}
+
+inline void configurarSensor(){
+    SetSensorUltrasonic(ENTRADA_US);
+    SetSensorLowspeed(ENTRADA_US);
+}
+
+task main(){
+    //Precedes(pollito);
+    configurarSensor();
+    start controlar_pollito;
+}

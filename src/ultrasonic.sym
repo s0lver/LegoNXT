@@ -1,0 +1,725 @@
+#SYMBOLS
+Index	Identifier	Type	Flag	Data	Size	RefCount
+0	__D0pillido_inline_musica_reposo	6	1	0	4	12
+1	__D0imprimirDistancia_inline_controlar_pollito	6	1	4	4	3
+2	__D0SetSensorLowspeed_inline_SetSensorUltrasonic	6	1	8	4	2
+3	__DU0SetSensorLowspeed_inline_SetSensorUltrasonic	5	1	12	4	5
+4	__signed_stack_001controlar_pollito	6	1	16	4	4
+5	__signed_stack_001musica_reversa	6	1	20	4	2
+6	__D0moverHaciaAtras_inline_controlar_pollito	6	1	24	4	3
+7	__D0moverHaciaAdelante_inline_controlar_pollito	6	1	28	4	3
+8	__D0musica_reposo	6	1	32	4	2
+9	__DU0musica_reposo	5	1	36	4	2
+10	__SPTArgsMutex	9	0	40	4	10
+11	__D0controlar_pollito	6	1	44	4	14
+12	__D0SetSensorLowspeed_inline_configurarSensor	6	1	48	4	2
+13	__DU0SetSensorLowspeed_inline_configurarSensor	5	1	52	4	5
+14	__D0musica_reversa	6	1	56	4	5
+15	__DU0musica_reversa	5	1	60	4	2
+16	__signed_stack_002moverHaciaAdelante_inline_controlar_pollito	6	1	64	4	2
+17	__signed_stack_001detener_inline_controlar_pollito	6	1	68	4	2
+18	__signed_stack_002moverHaciaAtras_inline_controlar_pollito	6	1	72	4	2
+19	__signed_stack_001moverHaciaAdelante_inline_controlar_pollito	6	1	76	4	2
+20	__Wait_7qG2_ms_7qG2_000_inline_pillido_inline_musica_reposo	5	1	80	4	4
+21	__Wait_7qG2_ms_7qG2_000_inline_musica_reposo	5	1	84	4	4
+22	__signed_stack_002detener_inline_controlar_pollito	6	1	88	4	2
+23	__Wait_7qG2_ms_7qG2_000_inline_musica_reversa	5	1	92	4	2
+24	__signed_stack_001pillido_inline_musica_reposo	6	1	96	4	8
+25	__signed_stack_002pillido_inline_musica_reposo	6	1	100	4	8
+26	__signed_stack_002musica_reversa	6	1	104	4	2
+27	__signed_stack_003musica_reversa	6	1	108	4	2
+28	__signed_stack_002imprimirDistancia_inline_controlar_pollito	6	1	112	4	2
+29	__signed_stack_001moverHaciaAtras_inline_controlar_pollito	6	1	116	4	2
+30	__signed_stack_003pillido_inline_musica_reposo	6	1	120	4	8
+31	__signed_stack_001imprimirDistancia_inline_controlar_pollito	6	1	124	4	2
+32	__TextOutMutex	9	0	128	4	8
+33	__CLSRMutex3	9	0	132	4	2
+34	__PointOutMutex	9	0	136	4	2
+35	__RLSBmutex3	9	0	140	4	2
+36	__CLSCSMutex3	9	0	144	4	2
+37	__ResetSensorMutex	9	0	148	4	4
+38	__CLSWMutex3	9	0	152	4	2
+39	__OnRevMutex	9	0	156	4	2
+40	__imprimirDistancia_7qG2_distancia_7qG2_000_inline_controlar_pollito	4	1	160	2	2
+41	__controlar_pollito_7qG2_distancia_7qG2_000	4	1	162	2	5
+42	__constVal200	4	0	164	2	2
+43	en_reposo	1	1	166	1	4
+44	__SetSensorLowspeed_7qG2_bIsPowered_7qG2_000_inline_SetSensorUltrasonic_inline_configurarSensor_inline_main	1	1	167	1	2
+45	__SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_configurarSensor_inline_main	1	1	168	1	2
+46	en_reversa	1	1	169	1	4
+47	__constVal0	2	1	170	1	12
+48	__SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_configurarSensor_inline_main	1	1	171	1	2
+49	__constVal32	2	0	172	1	8
+50	__constVal1	2	0	173	1	5
+51	__SetSensorLowspeed_7qG2_port_7qG2_000_inline_SetSensorUltrasonic_inline_configurarSensor_inline_main	1	1	174	1	4
+52	__constVal63	2	0	175	1	3
+53	__constVal96	2	0	176	1	3
+54	__ResetSensor_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_configurarSensor_inline_main	1	1	177	1	2
+55	__SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_configurarSensor_inline_main	1	1	178	1	2
+56	__SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_configurarSensor_inline_main	1	1	179	1	2
+57	__ResetSensor_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_configurarSensor_inline_main	1	1	180	1	2
+58	__OnRev_Tmp	2	1	181	1	2
+59	____initialize_global_data_return	1	1	182	1	3
+60	__SetSensorUltrasonic_7qG2_port_7qG2_000_inline_configurarSensor_inline_main	1	1	183	1	2
+61	__constVal3	2	0	184	1	3
+62	__RLSBytesCount3	1	1	185	1	7
+63	__RLSBResult3	2	1	186	1	7
+64	__SetSensorLowspeed_7qG2_bIsPowered_7qG2_000_inline_configurarSensor_inline_main	1	1	187	1	2
+65	__SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_configurarSensor_inline_main	1	1	188	1	2
+66	____ReadLSBytes3_return	1	1	189	1	3
+67	__SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_configurarSensor_inline_main	1	1	190	1	2
+68	__SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLowspeed_inline_configurarSensor_inline_main	1	1	191	1	2
+69	__constVal2	2	0	192	1	1
+70	____ResetSensorSubroutine_return	1	1	193	1	4
+71	__ResetSensorTmp	1	1	194	1	2
+72	__ResetSensorPort	1	1	195	1	4
+73	__SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLowspeed_inline_configurarSensor_inline_main	1	1	196	1	2
+74	__LSWriteOptions3	1	1	197	1	1
+75	__SetSensorLowspeed_7qG2_port_7qG2_000_inline_configurarSensor_inline_main	1	1	198	1	4
+76	__RLSBIterations3	1	1	199	1	4
+77	__SPTArgs	8	0	5	8	30
+78	__SPTArgs.Result	2	1	200	1	30
+79	__SPTArgs.Frequency	3	1	202	2	30
+80	__SPTArgs.Duration	3	1	204	2	30
+81	__SPTArgs.Loop	1	1	206	1	30
+82	__SPTArgs.Volume	1	1	207	1	30
+83	__CLSWArgs3	8	0	4	12	5
+84	__CLSWArgs3.Result	2	1	208	1	5
+85	__CLSWArgs3.Port	1	1	209	1	5
+86	__CLSWArgs3.Buffer	7	0	210	4	5
+87	__CLSWArgs3.Buffer.Buffer_type	1	0	0	1	0
+88	__CLSWArgs3.ReturnLen	1	1	212	1	5
+89	__CLSCSArgs3	8	0	3	4	4
+90	__CLSCSArgs3.Result	2	1	216	1	4
+91	__CLSCSArgs3.Port	1	1	217	1	4
+92	__CLSCSArgs3.BytesReady	1	1	218	1	4
+93	__CLSRArgs3	8	0	4	12	5
+94	__CLSRArgs3.Result	2	1	220	1	5
+95	__CLSRArgs3.Port	1	1	221	1	5
+96	__CLSRArgs3.Buffer	7	0	222	4	5
+97	__CLSRArgs3.Buffer.Buffer_type	1	0	0	1	0
+98	__CLSRArgs3.BufferLen	1	1	224	1	5
+99	__PointOutArgs	8	0	3	12	4
+100	__PointOutArgs.Result	2	1	228	1	4
+101	__PointOutArgs.Location	8	0	2	4	4
+102	__PointOutArgs.Location.X	4	1	232	2	4
+103	__PointOutArgs.Location.Y	4	1	234	2	4
+104	__PointOutArgs.Options	5	1	236	4	4
+105	__TextOutArgs	8	0	4	16	23
+106	__TextOutArgs.Result	2	1	240	1	23
+107	__TextOutArgs.Location	8	0	2	4	23
+108	__TextOutArgs.Location.X	4	1	244	2	23
+109	__TextOutArgs.Location.Y	4	1	246	2	23
+110	__TextOutArgs.Text	7	0	248	4	23
+111	__TextOutArgs.Text.Text_type	1	0	0	1	0
+112	__TextOutArgs.Options	5	1	252	4	23
+113	__RLSReadBuf3	7	0	256	4	8
+114	__RLSReadBuf3.__RLSReadBuf3_type	1	0	0	1	0
+115	__strbufmoverHaciaAtras_inline_controlar_pollito	7	0	258	4	2
+116	__strbufmoverHaciaAtras_inline_controlar_pollito.__strbufmoverHaciaAtras_inline_controlar_pollito_type	1	0	0	1	0
+117	__RLSLastGoodRead3	7	0	260	4	2
+118	__RLSLastGoodRead3.__RLSLastGoodRead3_type	1	0	0	1	0
+119	__OUT_BC	7	0	262	4	3
+120	__OUT_BC.__OUT_BC_type	1	0	0	1	0
+121	__RLSBbufLSWrite1	7	0	264	4	1
+122	__RLSBbufLSWrite1.__RLSBbufLSWrite1_type	1	0	0	1	0
+123	__constStr0010	7	0	266	4	1
+124	__constStr0010.__constStr0010_type	1	1	0	1	0
+125	__constStr0011	7	0	268	4	1
+126	__constStr0011.__constStr0011_type	1	1	0	1	0
+127	__constStr0009	7	0	270	4	1
+128	__constStr0009.__constStr0009_type	1	1	0	1	0
+129	__strbufmoverHaciaAdelante_inline_controlar_pollito	7	0	272	4	2
+130	__strbufmoverHaciaAdelante_inline_controlar_pollito.__strbufmoverHaciaAdelante_inline_controlar_pollito_type	1	0	0	1	0
+131	__strbufdetener_inline_controlar_pollito	7	0	274	4	2
+132	__strbufdetener_inline_controlar_pollito.__strbufdetener_inline_controlar_pollito_type	1	0	0	1	0
+#SOURCES
+Clump	Line	PC	Source
+0	91	0	#line 91 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+0	92	0		subcall __initialize_global_data, ____initialize_global_data_return
+0	91	2	#line 91 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+0	85	2	#line 85 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+0	86	2		set __SetSensorUltrasonic_7qG2_port_7qG2_000_inline_configurarSensor_inline_main, 3
+0	85	5	#line 85 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+0	4352	5	#line 4352 "NXCDefs.h"
+0	4353	5		mov __SetSensorLowspeed_7qG2_port_7qG2_000_inline_SetSensorUltrasonic_inline_configurarSensor_inline_main, __SetSensorUltrasonic_7qG2_port_7qG2_000_inline_configurarSensor_inline_main
+0	4352	7	#line 4352 "NXCDefs.h"
+0	4352	7	#line 4352 "NXCDefs.h"
+0	4353	7		mov __SetSensorLowspeed_7qG2_bIsPowered_7qG2_000_inline_SetSensorUltrasonic_inline_configurarSensor_inline_main, __constVal1
+0	4342	9	#line 4342 "NXCDefs.h"
+0	4343	9		mov __SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_configurarSensor_inline_main, __SetSensorLowspeed_7qG2_port_7qG2_000_inline_SetSensorUltrasonic_inline_configurarSensor_inline_main
+0	4342	11	#line 4342 "NXCDefs.h"
+0	4342	11	#line 4342 "NXCDefs.h"
+0	4343	11		mov __DU0SetSensorLowspeed_inline_SetSensorUltrasonic, __SetSensorLowspeed_7qG2_bIsPowered_7qG2_000_inline_SetSensorUltrasonic_inline_configurarSensor_inline_main
+0	4342	13	#line 4342 "NXCDefs.h"
+0	4343	13		tst 5, __D0SetSensorLowspeed_inline_SetSensorUltrasonic, __DU0SetSensorLowspeed_inline_SetSensorUltrasonic
+0	4342	16	#line 4342 "NXCDefs.h"
+0	4343	16		brtst 4, __001__001__001__ASM_Label_36, __D0SetSensorLowspeed_inline_SetSensorUltrasonic
+0	4342	19	#line 4342 "NXCDefs.h"
+0	4343	19		set __DU0SetSensorLowspeed_inline_SetSensorUltrasonic, 11
+0	4342	22	#line 4342 "NXCDefs.h"
+0	4342	22	#line 4342 "NXCDefs.h"
+0	4343	22		jmp __001__001__001__ASM_Label_37
+0	4342	24	#line 4342 "NXCDefs.h"
+0	4343	24		set __DU0SetSensorLowspeed_inline_SetSensorUltrasonic, 10
+0	4342	27	#line 4342 "NXCDefs.h"
+0	4342	27	#line 4342 "NXCDefs.h"
+0	4343	27		mov __SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_configurarSensor_inline_main, __DU0SetSensorLowspeed_inline_SetSensorUltrasonic
+0	4247	29	#line 4247 "NXCDefs.h"
+0	4248	29		setin __SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_configurarSensor_inline_main, __SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_configurarSensor_inline_main, 0
+0	4247	33	#line 4247 "NXCDefs.h"
+0	4343	33	#line 4343 "NXCDefs.h"
+0	4343	33	#line 4343 "NXCDefs.h"
+0	4344	33		mov __SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_configurarSensor_inline_main, __SetSensorLowspeed_7qG2_port_7qG2_000_inline_SetSensorUltrasonic_inline_configurarSensor_inline_main
+0	4343	35	#line 4343 "NXCDefs.h"
+0	4343	35	#line 4343 "NXCDefs.h"
+0	4344	35		set __SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_configurarSensor_inline_main, 0
+0	4343	38	#line 4343 "NXCDefs.h"
+0	4260	38	#line 4260 "NXCDefs.h"
+0	4261	38		setin __SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_configurarSensor_inline_main, __SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_configurarSensor_inline_main, 1
+0	4260	42	#line 4260 "NXCDefs.h"
+0	4344	42	#line 4344 "NXCDefs.h"
+0	4344	42	#line 4344 "NXCDefs.h"
+0	4345	42		mov __ResetSensor_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_configurarSensor_inline_main, __SetSensorLowspeed_7qG2_port_7qG2_000_inline_SetSensorUltrasonic_inline_configurarSensor_inline_main
+0	4344	44	#line 4344 "NXCDefs.h"
+0	4278	44	#line 4278 "NXCDefs.h"
+0	4279	44	#pragma macro 4
+0	4279	44		acquire __ResetSensorMutex
+0	4279	45		mov __ResetSensorPort, __ResetSensor_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_SetSensorUltrasonic_inline_configurarSensor_inline_main
+0	4279	47		subcall __ResetSensorSubroutine, ____ResetSensorSubroutine_return
+0	4279	49		release __ResetSensorMutex
+0	7563	50	#line 7563 "NXCDefs.h"
+0	4278	50	#line 4278 "NXCDefs.h"
+0	4345	50	#line 4345 "NXCDefs.h"
+0	4352	50	#line 4352 "NXCDefs.h"
+0	86	50	#line 86 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+0	86	50	#line 86 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+0	87	50		set __SetSensorLowspeed_7qG2_port_7qG2_000_inline_configurarSensor_inline_main, 3
+0	86	53	#line 86 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+0	87	53	#line 87 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+0	88	53		mov __SetSensorLowspeed_7qG2_bIsPowered_7qG2_000_inline_configurarSensor_inline_main, __constVal1
+0	4342	55	#line 4342 "NXCDefs.h"
+0	4343	55		mov __SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_configurarSensor_inline_main, __SetSensorLowspeed_7qG2_port_7qG2_000_inline_configurarSensor_inline_main
+0	4342	57	#line 4342 "NXCDefs.h"
+0	4342	57	#line 4342 "NXCDefs.h"
+0	4343	57		mov __DU0SetSensorLowspeed_inline_configurarSensor, __SetSensorLowspeed_7qG2_bIsPowered_7qG2_000_inline_configurarSensor_inline_main
+0	4342	59	#line 4342 "NXCDefs.h"
+0	4343	59		tst 5, __D0SetSensorLowspeed_inline_configurarSensor, __DU0SetSensorLowspeed_inline_configurarSensor
+0	4342	62	#line 4342 "NXCDefs.h"
+0	4343	62		brtst 4, __004__001__ASM_Label_36, __D0SetSensorLowspeed_inline_configurarSensor
+0	4342	65	#line 4342 "NXCDefs.h"
+0	4343	65		set __DU0SetSensorLowspeed_inline_configurarSensor, 11
+0	4342	68	#line 4342 "NXCDefs.h"
+0	4342	68	#line 4342 "NXCDefs.h"
+0	4343	68		jmp __004__001__ASM_Label_37
+0	4342	70	#line 4342 "NXCDefs.h"
+0	4343	70		set __DU0SetSensorLowspeed_inline_configurarSensor, 10
+0	4342	73	#line 4342 "NXCDefs.h"
+0	4342	73	#line 4342 "NXCDefs.h"
+0	4343	73		mov __SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLowspeed_inline_configurarSensor_inline_main, __DU0SetSensorLowspeed_inline_configurarSensor
+0	4247	75	#line 4247 "NXCDefs.h"
+0	4248	75		setin __SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLowspeed_inline_configurarSensor_inline_main, __SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_configurarSensor_inline_main, 0
+0	4247	79	#line 4247 "NXCDefs.h"
+0	4343	79	#line 4343 "NXCDefs.h"
+0	4343	79	#line 4343 "NXCDefs.h"
+0	4344	79		mov __SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_configurarSensor_inline_main, __SetSensorLowspeed_7qG2_port_7qG2_000_inline_configurarSensor_inline_main
+0	4343	81	#line 4343 "NXCDefs.h"
+0	4343	81	#line 4343 "NXCDefs.h"
+0	4344	81		set __SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLowspeed_inline_configurarSensor_inline_main, 0
+0	4343	84	#line 4343 "NXCDefs.h"
+0	4260	84	#line 4260 "NXCDefs.h"
+0	4261	84		setin __SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLowspeed_inline_configurarSensor_inline_main, __SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_configurarSensor_inline_main, 1
+0	4260	88	#line 4260 "NXCDefs.h"
+0	4344	88	#line 4344 "NXCDefs.h"
+0	4344	88	#line 4344 "NXCDefs.h"
+0	4345	88		mov __ResetSensor_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_configurarSensor_inline_main, __SetSensorLowspeed_7qG2_port_7qG2_000_inline_configurarSensor_inline_main
+0	4344	90	#line 4344 "NXCDefs.h"
+0	4278	90	#line 4278 "NXCDefs.h"
+0	4279	90	#pragma macro 4
+0	4279	90		acquire __ResetSensorMutex
+0	4279	91		mov __ResetSensorPort, __ResetSensor_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_configurarSensor_inline_main
+0	4279	93		subcall __ResetSensorSubroutine, ____ResetSensorSubroutine_return
+0	4279	95		release __ResetSensorMutex
+0	7627	96	#line 7627 "NXCDefs.h"
+0	4278	96	#line 4278 "NXCDefs.h"
+0	4345	96	#line 4345 "NXCDefs.h"
+0	87	96	#line 87 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+0	92	96	#line 92 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+0	93	96	#line 93 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+0	94	96		start controlar_pollito
+0	93	98	#line 93 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+0	94	98		exit -1, -1
+1	5476	0		setin __constVal1, __ResetSensorPort, 5
+1	5478	4		getin __ResetSensorTmp, __ResetSensorPort, 5
+1	5479	8		brtst 5, __SensorStillInvalid, __ResetSensorTmp
+1	5480	11		subret ____ResetSensorSubroutine_return
+2	6393	0	#pragma macro 25
+2	6393	0		acquire __CLSWMutex3
+2	6393	1		or __CLSWArgs3.Port, __constVal3, __LSWriteOptions3
+2	6393	5		mov __CLSWArgs3.ReturnLen, __RLSBytesCount3
+2	6393	7		mov __CLSWArgs3.Buffer, __RLSReadBuf3
+2	6393	9		syscall 21, __CLSWArgs3
+2	6393	12		mov __RLSBResult3, __CLSWArgs3.Result
+2	6393	14		release __CLSWMutex3
+2	6393	15	#line 6393 "NXTDefs.h"
+2	6394	15		brtst 5, __RLSBError3, __RLSBResult3
+2	6395	18		set __RLSBIterations3, 60
+2	6397	21	#pragma macro 23
+2	6397	21		acquire __CLSCSMutex3
+2	6397	22		set __CLSCSArgs3.Port, 3
+2	6397	25		syscall 23, __CLSCSArgs3
+2	6397	28		mov __RLSBytesCount3, __CLSCSArgs3.BytesReady
+2	6397	30		mov __RLSBResult3, __CLSCSArgs3.Result
+2	6397	32		release __CLSCSMutex3
+2	6397	33	#line 6397 "NXTDefs.h"
+2	6398	33		sub __RLSBIterations3, __RLSBIterations3, __constVal1
+2	6399	37		brtst 2, __RLSBError3, __RLSBIterations3
+2	6400	40		brtst 0, __RLSBError3, __RLSBResult3
+2	6401	43		brtst 4, __RLSBReadyToRead3, __RLSBResult3
+2	6403	46		wait 1
+2	6404	48		jmp __RLSBDoCheckStatus3
+2	6406	50		brtst 4, __RLSBReturn3, __RLSBytesCount3
+2	6407	53		arrinit __RLSReadBuf3, __constVal0, __RLSBytesCount3
+2	6409	57	#pragma macro 25
+2	6409	57		acquire __CLSRMutex3
+2	6409	58		set __CLSRArgs3.Port, 3
+2	6409	61		mov __CLSRArgs3.BufferLen, __RLSBytesCount3
+2	6409	63		syscall 22, __CLSRArgs3
+2	6409	66		mov __RLSReadBuf3, __CLSRArgs3.Buffer
+2	6409	68		mov __RLSBResult3, __CLSRArgs3.Result
+2	6409	70		release __CLSRMutex3
+2	6409	71	#line 6409 "NXTDefs.h"
+2	6410	71		brtst 5, __RLSBError3, __RLSBResult3
+2	6411	74		mov __RLSLastGoodRead3, __RLSReadBuf3
+2	6412	76		jmp __RLSBDone3
+2	6414	78		mov __RLSReadBuf3, __RLSLastGoodRead3
+2	6416	80		arrsize __RLSBytesCount3, __RLSReadBuf3
+2	6418	83		subret ____ReadLSBytes3_return
+3	10	0	#line 10 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+3	11	0		mov __DU0musica_reversa, en_reversa
+3	11	2	#line 11 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+3	12	2		tst 5, __D0musica_reversa, __DU0musica_reversa
+3	11	5	#line 11 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+3	12	5		brtst 4, __ASM_Label_605, __D0musica_reversa
+3	11	8	#line 11 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+3	12	8		set __signed_stack_001musica_reversa, 1245
+3	11	11	#line 11 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+3	11	11	#line 11 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+3	12	11		set __signed_stack_002musica_reversa, 400
+3	11	14	#line 11 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+3	11	14	#line 11 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+3	12	14		set __signed_stack_003musica_reversa, 2
+3	11	17	#line 11 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+3	11	17	#line 11 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+3	12	17		set __D0musica_reversa, 0
+3	12	20	#line 12 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+3	13	20		acquire __SPTArgsMutex
+3	12	21	#line 12 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+3	13	21		mov __SPTArgs.Frequency, __signed_stack_001musica_reversa
+3	12	23	#line 12 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+3	13	23		mov __SPTArgs.Duration, __signed_stack_002musica_reversa
+3	12	25	#line 12 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+3	13	25		mov __SPTArgs.Volume, __signed_stack_003musica_reversa
+3	12	27	#line 12 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+3	13	27		mov __SPTArgs.Loop, __D0musica_reversa
+3	12	29	#line 12 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+3	13	29		syscall 10, __SPTArgs
+3	12	32	#line 12 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+3	13	32		mov __D0musica_reversa, __SPTArgs.Result
+3	12	34	#line 12 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+3	13	34		release __SPTArgsMutex
+3	12	35	#line 12 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+3	12	35	#line 12 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+3	13	35		set __Wait_7qG2_ms_7qG2_000_inline_musica_reversa, 1000
+3	12	38	#line 12 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+3	8551	38	#line 8551 "NXCDefs.h"
+3	8552	38		waitv __Wait_7qG2_ms_7qG2_000_inline_musica_reversa
+3	8551	40	#line 8551 "NXCDefs.h"
+3	13	40	#line 13 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+3	16	40	#line 16 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+3	17	40		jmp __ASM_Label_604
+3	16	42	#line 16 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+3	17	42		exit -1, -1
+4	23	0	#line 23 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	24	0		mov __DU0musica_reposo, en_reposo
+4	24	2	#line 24 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	25	2		tst 5, __D0musica_reposo, __DU0musica_reposo
+4	24	5	#line 24 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	25	5		brtst 4, __ASM_Label_637, __D0musica_reposo
+4	17	8	#line 17 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	18	8		set __signed_stack_001pillido_inline_musica_reposo, 1045
+4	17	11	#line 17 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	17	11	#line 17 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	18	11		set __signed_stack_002pillido_inline_musica_reposo, 400
+4	17	14	#line 17 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	17	14	#line 17 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	18	14		set __signed_stack_003pillido_inline_musica_reposo, 2
+4	17	17	#line 17 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	17	17	#line 17 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	18	17		set __D0pillido_inline_musica_reposo, 0
+4	18	20	#line 18 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	19	20		acquire __SPTArgsMutex
+4	18	21	#line 18 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	19	21		mov __SPTArgs.Frequency, __signed_stack_001pillido_inline_musica_reposo
+4	18	23	#line 18 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	19	23		mov __SPTArgs.Duration, __signed_stack_002pillido_inline_musica_reposo
+4	18	25	#line 18 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	19	25		mov __SPTArgs.Volume, __signed_stack_003pillido_inline_musica_reposo
+4	18	27	#line 18 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	19	27		mov __SPTArgs.Loop, __D0pillido_inline_musica_reposo
+4	18	29	#line 18 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	19	29		syscall 10, __SPTArgs
+4	18	32	#line 18 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	19	32		mov __D0pillido_inline_musica_reposo, __SPTArgs.Result
+4	18	34	#line 18 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	19	34		release __SPTArgsMutex
+4	18	35	#line 18 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	18	35	#line 18 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	19	35		set __Wait_7qG2_ms_7qG2_000_inline_pillido_inline_musica_reposo, 100
+4	18	38	#line 18 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	8551	38	#line 8551 "NXCDefs.h"
+4	8552	38		waitv __Wait_7qG2_ms_7qG2_000_inline_pillido_inline_musica_reposo
+4	8551	40	#line 8551 "NXCDefs.h"
+4	19	40	#line 19 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	19	40	#line 19 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	20	40		set __signed_stack_001pillido_inline_musica_reposo, 845
+4	19	43	#line 19 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	19	43	#line 19 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	20	43		set __signed_stack_002pillido_inline_musica_reposo, 400
+4	19	46	#line 19 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	19	46	#line 19 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	20	46		set __signed_stack_003pillido_inline_musica_reposo, 2
+4	19	49	#line 19 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	19	49	#line 19 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	20	49		set __D0pillido_inline_musica_reposo, 0
+4	20	52	#line 20 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	21	52		acquire __SPTArgsMutex
+4	20	53	#line 20 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	21	53		mov __SPTArgs.Frequency, __signed_stack_001pillido_inline_musica_reposo
+4	20	55	#line 20 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	21	55		mov __SPTArgs.Duration, __signed_stack_002pillido_inline_musica_reposo
+4	20	57	#line 20 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	21	57		mov __SPTArgs.Volume, __signed_stack_003pillido_inline_musica_reposo
+4	20	59	#line 20 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	21	59		mov __SPTArgs.Loop, __D0pillido_inline_musica_reposo
+4	20	61	#line 20 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	21	61		syscall 10, __SPTArgs
+4	20	64	#line 20 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	21	64		mov __D0pillido_inline_musica_reposo, __SPTArgs.Result
+4	20	66	#line 20 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	21	66		release __SPTArgsMutex
+4	20	67	#line 20 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	25	67	#line 25 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	25	67	#line 25 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	26	67		set __Wait_7qG2_ms_7qG2_000_inline_musica_reposo, 700
+4	25	70	#line 25 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	8551	70	#line 8551 "NXCDefs.h"
+4	8552	70		waitv __Wait_7qG2_ms_7qG2_000_inline_musica_reposo
+4	8551	72	#line 8551 "NXCDefs.h"
+4	27	72	#line 27 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	17	72	#line 17 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	18	72		set __signed_stack_001pillido_inline_musica_reposo, 1045
+4	17	75	#line 17 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	17	75	#line 17 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	18	75		set __signed_stack_002pillido_inline_musica_reposo, 400
+4	17	78	#line 17 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	17	78	#line 17 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	18	78		set __signed_stack_003pillido_inline_musica_reposo, 2
+4	17	81	#line 17 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	17	81	#line 17 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	18	81		set __D0pillido_inline_musica_reposo, 0
+4	18	84	#line 18 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	19	84		acquire __SPTArgsMutex
+4	18	85	#line 18 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	19	85		mov __SPTArgs.Frequency, __signed_stack_001pillido_inline_musica_reposo
+4	18	87	#line 18 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	19	87		mov __SPTArgs.Duration, __signed_stack_002pillido_inline_musica_reposo
+4	18	89	#line 18 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	19	89		mov __SPTArgs.Volume, __signed_stack_003pillido_inline_musica_reposo
+4	18	91	#line 18 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	19	91		mov __SPTArgs.Loop, __D0pillido_inline_musica_reposo
+4	18	93	#line 18 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	19	93		syscall 10, __SPTArgs
+4	18	96	#line 18 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	19	96		mov __D0pillido_inline_musica_reposo, __SPTArgs.Result
+4	18	98	#line 18 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	19	98		release __SPTArgsMutex
+4	18	99	#line 18 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	18	99	#line 18 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	19	99		set __Wait_7qG2_ms_7qG2_000_inline_pillido_inline_musica_reposo, 100
+4	18	102	#line 18 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	8551	102	#line 8551 "NXCDefs.h"
+4	8552	102		waitv __Wait_7qG2_ms_7qG2_000_inline_pillido_inline_musica_reposo
+4	8551	104	#line 8551 "NXCDefs.h"
+4	19	104	#line 19 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	19	104	#line 19 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	20	104		set __signed_stack_001pillido_inline_musica_reposo, 845
+4	19	107	#line 19 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	19	107	#line 19 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	20	107		set __signed_stack_002pillido_inline_musica_reposo, 400
+4	19	110	#line 19 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	19	110	#line 19 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	20	110		set __signed_stack_003pillido_inline_musica_reposo, 2
+4	19	113	#line 19 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	19	113	#line 19 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	20	113		set __D0pillido_inline_musica_reposo, 0
+4	20	116	#line 20 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	21	116		acquire __SPTArgsMutex
+4	20	117	#line 20 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	21	117		mov __SPTArgs.Frequency, __signed_stack_001pillido_inline_musica_reposo
+4	20	119	#line 20 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	21	119		mov __SPTArgs.Duration, __signed_stack_002pillido_inline_musica_reposo
+4	20	121	#line 20 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	21	121		mov __SPTArgs.Volume, __signed_stack_003pillido_inline_musica_reposo
+4	20	123	#line 20 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	21	123		mov __SPTArgs.Loop, __D0pillido_inline_musica_reposo
+4	20	125	#line 20 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	21	125		syscall 10, __SPTArgs
+4	20	128	#line 20 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	21	128		mov __D0pillido_inline_musica_reposo, __SPTArgs.Result
+4	20	130	#line 20 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	21	130		release __SPTArgsMutex
+4	20	131	#line 20 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	28	131	#line 28 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	28	131	#line 28 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	29	131		set __Wait_7qG2_ms_7qG2_000_inline_musica_reposo, 1200
+4	28	134	#line 28 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	8551	134	#line 8551 "NXCDefs.h"
+4	8552	134		waitv __Wait_7qG2_ms_7qG2_000_inline_musica_reposo
+4	8551	136	#line 8551 "NXCDefs.h"
+4	29	136	#line 29 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	32	136	#line 32 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	33	136		jmp __ASM_Label_636
+4	32	138	#line 32 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+4	33	138		exit -1, -1
+5	67	0	#line 67 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	68	0		set __controlar_pollito_7qG2_distancia_7qG2_000, 0
+5	67	3	#line 67 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	67	3	#line 67 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	68	3		set __D0controlar_pollito, 1
+5	68	6	#line 68 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	69	6		tst 5, __D0controlar_pollito, __D0controlar_pollito
+5	68	9	#line 68 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	69	9		brtst 4, __ASM_Label_681, __D0controlar_pollito
+5	68	12	#line 68 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	69	12	#pragma macro 26
+5	69	12		acquire __RLSBmutex3
+5	69	13		mov __RLSReadBuf3, __RLSBbufLSWrite1
+5	69	15		set __RLSBytesCount3, 1
+5	69	18		wait 15
+5	69	20		subcall __ReadLSBytes3, ____ReadLSBytes3_return
+5	69	22		index __D0controlar_pollito, __RLSReadBuf3, 65535
+5	69	26		release __RLSBmutex3
+5	7188	27	#line 7188 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	68	27	#line 68 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	69	27		mov __controlar_pollito_7qG2_distancia_7qG2_000, __D0controlar_pollito
+5	68	29	#line 68 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	68	29	#line 68 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	70	29	#line 70 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	71	29		mov __imprimirDistancia_7qG2_distancia_7qG2_000_inline_controlar_pollito, __controlar_pollito_7qG2_distancia_7qG2_000
+5	70	31	#line 70 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	6678	31	#line 6678 "NXCDefs.h"
+5	6679	31	#pragma macro 6
+5	6679	31		acquire __PointOutMutex
+5	6679	32		mov __PointOutArgs.Location.X, __constVal200
+5	6679	34		mov __PointOutArgs.Location.Y, __constVal200
+5	6679	36		mov __PointOutArgs.Options, __constVal1
+5	6679	38		syscall 14, __PointOutArgs
+5	6679	41		release __PointOutMutex
+5	7206	42	#line 7206 "NXCDefs.h"
+5	6678	42	#line 6678 "NXCDefs.h"
+5	34	42	#line 34 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	34	42	#line 34 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	35	42		set __signed_stack_001imprimirDistancia_inline_controlar_pollito, 0
+5	34	45	#line 34 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	34	45	#line 34 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	35	45		set __signed_stack_002imprimirDistancia_inline_controlar_pollito, 0
+5	34	48	#line 34 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	34	48	#line 34 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	35	48		mov __D0imprimirDistancia_inline_controlar_pollito, __imprimirDistancia_7qG2_distancia_7qG2_000_inline_controlar_pollito
+5	35	50	#line 35 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	36	50		acquire __TextOutMutex
+5	35	51	#line 35 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	36	51		mov __TextOutArgs.Location.X, __signed_stack_001imprimirDistancia_inline_controlar_pollito
+5	35	53	#line 35 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	36	53		mov __TextOutArgs.Location.Y, __signed_stack_002imprimirDistancia_inline_controlar_pollito
+5	35	55	#line 35 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	36	55		set __TextOutArgs.Options, 0
+5	35	58	#line 35 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	36	58		numtostr __TextOutArgs.Text, __D0imprimirDistancia_inline_controlar_pollito
+5	35	61	#line 35 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	36	61		syscall 13, __TextOutArgs
+5	35	64	#line 35 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	36	64		mov __D0imprimirDistancia_inline_controlar_pollito, __TextOutArgs.Result
+5	35	66	#line 35 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	36	66		release __TextOutMutex
+5	35	67	#line 35 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	72	67	#line 72 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	72	67	#line 72 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	73	67		mov __signed_stack_001controlar_pollito, __controlar_pollito_7qG2_distancia_7qG2_000
+5	72	69	#line 72 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	72	69	#line 72 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	73	69		set __D0controlar_pollito, 38
+5	72	72	#line 72 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	73	72		cmp 0, __D0controlar_pollito, __signed_stack_001controlar_pollito, __D0controlar_pollito
+5	73	76	#line 73 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	74	76		brtst 4, __ASM_Label_692, __D0controlar_pollito
+5	38	79	#line 38 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	39	79		set __D0moverHaciaAtras_inline_controlar_pollito, 50
+5	39	82	#line 39 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	40	82	#pragma macro 10
+5	40	82		acquire __OnRevMutex
+5	40	83		neg __OnRev_Tmp, __D0moverHaciaAtras_inline_controlar_pollito
+5	40	86		setout __OUT_BC, 2, __OnRev_Tmp, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+5	40	109		release __OnRevMutex
+5	7260	110	#line 7260 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	39	110	#line 39 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	39	110	#line 39 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	40	110		set __signed_stack_001moverHaciaAtras_inline_controlar_pollito, 0
+5	39	113	#line 39 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	39	113	#line 39 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	40	113		set __signed_stack_002moverHaciaAtras_inline_controlar_pollito, 10
+5	39	116	#line 39 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	39	116	#line 39 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	40	116		strcat __strbufmoverHaciaAtras_inline_controlar_pollito, __constStr0009
+5	41	120	#line 41 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	42	120		acquire __TextOutMutex
+5	41	121	#line 41 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	42	121		mov __TextOutArgs.Location.X, __signed_stack_001moverHaciaAtras_inline_controlar_pollito
+5	41	123	#line 41 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	42	123		mov __TextOutArgs.Location.Y, __signed_stack_002moverHaciaAtras_inline_controlar_pollito
+5	41	125	#line 41 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	42	125		set __TextOutArgs.Options, 0
+5	41	128	#line 41 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	42	128		mov __TextOutArgs.Text, __strbufmoverHaciaAtras_inline_controlar_pollito
+5	41	130	#line 41 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	42	130		syscall 13, __TextOutArgs
+5	41	133	#line 41 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	42	133		mov __D0moverHaciaAtras_inline_controlar_pollito, __TextOutArgs.Result
+5	41	135	#line 41 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	42	135		release __TextOutMutex
+5	41	136	#line 41 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	42	136	#line 42 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	43	136		set en_reversa, 1
+5	42	139	#line 42 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	42	139	#line 42 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	43	139	#line 43 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	44	139		set en_reposo, 0
+5	43	142	#line 43 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	43	142	#line 43 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	44	142	#line 44 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	45	142		start musica_reversa
+5	44	144	#line 44 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	74	144	#line 74 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	75	144	#line 75 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	76	144		jmp __ASM_Label_693
+5	75	146	#line 75 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	76	146		mov __signed_stack_001controlar_pollito, __controlar_pollito_7qG2_distancia_7qG2_000
+5	75	148	#line 75 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	75	148	#line 75 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	76	148		set __D0controlar_pollito, 42
+5	75	151	#line 75 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	76	151		cmp 1, __D0controlar_pollito, __signed_stack_001controlar_pollito, __D0controlar_pollito
+5	76	155	#line 76 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	77	155		brtst 4, __ASM_Label_698, __D0controlar_pollito
+5	47	158	#line 47 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	48	158		set __D0moverHaciaAdelante_inline_controlar_pollito, 50
+5	48	161	#line 48 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	49	161	#pragma macro 7
+5	49	161		setout __OUT_BC, 2, __D0moverHaciaAdelante_inline_controlar_pollito, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+5	7327	184	#line 7327 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	48	184	#line 48 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	48	184	#line 48 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	49	184		set __signed_stack_001moverHaciaAdelante_inline_controlar_pollito, 0
+5	48	187	#line 48 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	48	187	#line 48 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	49	187		set __signed_stack_002moverHaciaAdelante_inline_controlar_pollito, 10
+5	48	190	#line 48 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	48	190	#line 48 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	49	190		strcat __strbufmoverHaciaAdelante_inline_controlar_pollito, __constStr0010
+5	50	194	#line 50 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	51	194		acquire __TextOutMutex
+5	50	195	#line 50 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	51	195		mov __TextOutArgs.Location.X, __signed_stack_001moverHaciaAdelante_inline_controlar_pollito
+5	50	197	#line 50 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	51	197		mov __TextOutArgs.Location.Y, __signed_stack_002moverHaciaAdelante_inline_controlar_pollito
+5	50	199	#line 50 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	51	199		set __TextOutArgs.Options, 0
+5	50	202	#line 50 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	51	202		mov __TextOutArgs.Text, __strbufmoverHaciaAdelante_inline_controlar_pollito
+5	50	204	#line 50 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	51	204		syscall 13, __TextOutArgs
+5	50	207	#line 50 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	51	207		mov __D0moverHaciaAdelante_inline_controlar_pollito, __TextOutArgs.Result
+5	50	209	#line 50 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	51	209		release __TextOutMutex
+5	50	210	#line 50 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	51	210	#line 51 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	52	210		set en_reversa, 0
+5	51	213	#line 51 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	51	213	#line 51 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	52	213	#line 52 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	53	213		set en_reposo, 0
+5	52	216	#line 52 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	52	216	#line 52 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	77	216	#line 77 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	79	216	#line 79 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	80	216		jmp __ASM_Label_699
+5	55	218	#line 55 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	56	218		set __signed_stack_001detener_inline_controlar_pollito, 0
+5	55	221	#line 55 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	55	221	#line 55 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	56	221		set __signed_stack_002detener_inline_controlar_pollito, 10
+5	55	224	#line 55 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	55	224	#line 55 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	56	224		strcat __strbufdetener_inline_controlar_pollito, __constStr0011
+5	56	228	#line 56 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	57	228		acquire __TextOutMutex
+5	56	229	#line 56 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	57	229		mov __TextOutArgs.Location.X, __signed_stack_001detener_inline_controlar_pollito
+5	56	231	#line 56 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	57	231		mov __TextOutArgs.Location.Y, __signed_stack_002detener_inline_controlar_pollito
+5	56	233	#line 56 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	57	233		set __TextOutArgs.Options, 0
+5	56	236	#line 56 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	57	236		mov __TextOutArgs.Text, __strbufdetener_inline_controlar_pollito
+5	56	238	#line 56 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	57	238		syscall 13, __TextOutArgs
+5	56	241	#line 56 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	56	241	#line 56 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	57	241		release __TextOutMutex
+5	56	242	#line 56 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	59	242	#line 59 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	60	242	#pragma macro 7
+5	60	242		setout __OUT_BC, 2, __constVal0, 1, __constVal2, 8, __constVal0, 6, __constVal0, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+5	7406	265	#line 7406 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	59	265	#line 59 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	60	265	#line 60 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	61	265		set en_reversa, 0
+5	60	268	#line 60 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	60	268	#line 60 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	61	268	#line 61 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	62	268		set en_reposo, 1
+5	61	271	#line 61 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	61	271	#line 61 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	62	271	#line 62 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	63	271		start musica_reposo
+5	62	273	#line 62 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	80	273	#line 80 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	82	273	#line 82 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	82	273	#line 82 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	84	273	#line 84 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	85	273		jmp __ASM_Label_680
+5	84	275	#line 84 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+5	85	275		exit -1, -1
+6	96	0	#line 96 "C:\Users\Rafael\AppData\Local\Temp\temp.nxc"
+6	97	0		subret ____initialize_global_data_return
+#CLUMPS
+Clump	Name	Offset	File
+0	main	0	C:\Users\Rafael\AppData\Local\Temp\temp.nxc
+1	__ResetSensorSubroutine	101	NXTDefs.h
+2	__ReadLSBytes3	114	NXTDefs.h
+3	musica_reversa	199	C:\Users\Rafael\AppData\Local\Temp\temp.nxc
+4	musica_reposo	244	C:\Users\Rafael\AppData\Local\Temp\temp.nxc
+5	controlar_pollito	385	C:\Users\Rafael\AppData\Local\Temp\temp.nxc
+6	__initialize_global_data	663	C:\Users\Rafael\AppData\Local\Temp\temp.nxc
