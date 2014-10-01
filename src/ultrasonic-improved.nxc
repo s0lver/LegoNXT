@@ -1,0 +1,21 @@
+#define ENTRADA_US IN_4
+#define LIMITE 40
+#define K_P 2.5
+#define POTENCIA_MOTOR 50
+
+task main(){
+    int distancia = 0;
+    float nueva_potencia = 0;
+    
+    SetSensorUltrasonic(ENTRADA_US);
+    SetSensorLowspeed(ENTRADA_US);
+    
+    while(true){
+        distancia = SensorUS(ENTRADA_US);
+        error = LIMITE - distancia;
+        nueva_potencia = K_P * error;
+
+        OnFwd(OUT_BC, nueva_potencia);
+        Wait(500);
+    }
+}
