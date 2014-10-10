@@ -1,0 +1,106 @@
+#define VERDE 0
+#define AMARILLO 1
+#define ROJO 2
+
+#define SEGUNDOS_VERDE 10
+#define SEGUNDOS_AMARILLO 3
+#define SEGUNDOS_ROJO 5
+
+#define POTENCIA_LEDS 100
+
+int tiempo_efectivo_verde = SEGUNDOS_VERDE * 1000;
+int tiempo_efectivo_amarillo = SEGUNDOS_AMARILLO * 1000;
+int tiempo_efectivo_rojo = SEGUNDOS_ROJO * 1000;
+
+void encender_led_verde(byte segundos_consumidos){
+	OnFwd(OUT_C, POTENCIA_LEDS);
+	Off(OUT_AB);
+	if (segundos_consumidos >= SEGUNDOS_VERDE)
+		TextOut(0,0, "Verde, listo      ");
+	else
+		TextOut(0,0, StrCat("Verde, ", NumToStr(segundos_consumidos), " seg  "));
+}
+
+void encender_led_amarillo(byte segundos_consumidos){
+	OnFwd(OUT_B, POTENCIA_LEDS);
+	Off(OUT_AC);
+	TextOut(0,0, StrCat("Amarillo, ", NumToStr(SEGUNDOS_AMARILLO - segundos_consumidos), " seg  "));
+}
+
+void encender_led_rojo(byte segundos_consumidos){
+	OnFwd(OUT_A, POTENCIA_LEDS);
+	Off(OUT_BC);
+	TextOut(0,0, StrCat("Rojo, ", NumToStr(SEGUNDOS_ROJO - segundos_consumidos), " seg      "));
+}
+
+inline void encender_led(const byte & color_semaforo, const long & tiempo_consumido ){
+	
+	byte segundos_consumidos = tiempo_consumido / 1000;
+
+	switch(color_semaforo){
+		case VERDE:
+			encender_led_verde(segundos_consumidos);
+			break;
+		case AMARILLO:
+			encender_led_amarillo(segundos_consumidos);
+			break;
+		case ROJO:
+			encender_led_rojo(segundos_consumidos);
+			break;
+		default:
+			OnFwd(OUT_ABC, POTENCIA_LEDS);
+			TextOut(0,0, "No ident");
+	}
+}
+
+task main(){
+	SetSensorTouch(IN_1);
+
+	byte color_semaforo = VERDE;
+	byte estado = 0;
+	
+	long tiempo_actual = CurrentTick();
+	long tiempo_inicial = tiempo_actual;
+	
+
+	bool flag = FALSE;
+	byte proximo_estado = 0;
+
+	long tiempo_consumido = 0;
+	
+	while(true){
+		tiempo_actual = CurrentTick();
+		switch(estado){
+			case 0:
+				color_semaforo = VERDE;
+				if (SENSOR_1) flag = true;
+
+				tiempo_consumido = tiempo_actual - tiempo_inicial;
+				if (tiempo_consumido > tiempo_efectivo_verde) proximo_estado = 1;
+				
+				break;
+
+			case 1:
+				color_semaforo = VERDE;
+				if (SENSOR_1 || flag){ proximo_estado = 2; tiempo_inicial = tiempo_actual; }
+				break;
+
+			case 2:
+				color_semaforo = AMARILLO;
+				tiempo_consumido = tiempo_actual - tiempo_inicial;
+				if (tiempo_consumido > tiempo_efectivo_amarillo){ proximo_estado = 3; tiempo_inicial = tiempo_actual; }
+				
+				break;
+
+			case 3:
+				color_semaforo = ROJO;
+				tiempo_consumido = tiempo_actual - tiempo_inicial;
+				if (tiempo_consumido > tiempo_efectivo_rojo){ proximo_estado = 0; tiempo_inicial = tiempo_actual; flag = false; }
+
+				break;
+		}
+
+		estado = proximo_estado;
+		encender_led(color_semaforo, tiempo_consumido);
+	}
+}
