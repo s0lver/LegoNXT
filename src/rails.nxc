@@ -10,16 +10,16 @@ const byte ESTADO_CARRIL_AUTO_REABIERTO = 4;
 const long umbralMaximo = 3000;
 
 task main(){
-  inicializarPlataforma();
 	long tiempo_inicial = CurrentTick();
-
-	bool flag = FALSE;
+  long tiempo_consumido = 0;
+  
 	byte proximo_estado = 0;
-
-	long tiempo_consumido = 0;
-	
 	byte estado = 0;
+
   bool ultimaPulsacion = false;
+  
+  inicializarPlataforma();
+  
 	while(true){
 		switch(estado){
 			case ESTADO_INICIAL:

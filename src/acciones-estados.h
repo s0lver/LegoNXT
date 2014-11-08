@@ -1,99 +1,6 @@
-bool banderaCarrilAutoCerrado = false;
-bool banderaCarrilAutoPrecaucion = false;
+#include "acceso-actuadores.h"
 
-bool barreraXAbierta;
-bool barreraYAbierta;
-bool barreraZAbierta;
-bool estadoAlarma;
-bool trenPorIzquierda;
-
-byte estadoLuz;
-
-inline void controlarBarrerasCarrilAutoCerrado(bool trenPorIzquierda){
-       barreraYAbierta = false;
-       barreraZAbierta = false;
-       
-       if (trenPorIzquierda == true){
-          RotateMotor(OUT_BC, POTENCIA_MOTOR_BARRERAS, GRADOS_BARRERAS * (-1));
-       }
-       else{
-            RotateMotor(OUT_AB, POTENCIA_MOTOR_BARRERAS, GRADOS_BARRERAS * (-1));
-       }
-}
-
-inline void controlarBarrerasCarrilAutoPrecaucion(){
-       barreraZAbierta = true;
-       RotateMotor(OUT_B, POTENCIA_MOTOR_BARRERAS, GRADOS_BARRERAS);
-}
-
-inline void controlarBarrerasTrenEnMedio(bool desdeCarrilAutoPrecaucion){
-       barreraZAbierta = false;
-       if (desdeCarrilAutoPrecaucion)
-          RotateMotor(OUT_B, POTENCIA_MOTOR_BARRERAS, GRADOS_BARRERAS * (-1));
-}
-
-inline void controlarBarrerasCarrilAutoReabierto(){
-       barreraZAbierta = true;
-       RotateMotor(OUT_B, POTENCIA_MOTOR_BARRERAS, GRADOS_BARRERAS);
-}
-
-inline void controlarBarrerasTrenFuera(bool trenPorIzquierda){
-       barreraYAbierta = true;
-       if (trenPorIzquierda == true){
-          RotateMotor(OUT_C, POTENCIA_MOTOR_BARRERAS, GRADOS_BARRERAS);
-       }
-       else{
-            RotateMotor(OUT_A, POTENCIA_MOTOR_BARRERAS, GRADOS_BARRERAS);
-       }
-}
-
-task tareaAlarmaCarrilAutoCerrado(){
-     while(banderaCarrilAutoCerrado){
-        PlayToneEx(1245, 100, 1, FALSE);
-        Wait(200);
-    }
-}
-
-void reproducirAlarmaCarrilAutoCerrado(){
-     banderaCarrilAutoCerrado = true;
-     estadoAlarma = true;
-     start tareaAlarmaCarrilAutoCerrado;
-}
-
-void detenerAlarmaCarrilAutoCerrado(){
-     banderaCarrilAutoCerrado = false;
-     estadoAlarma = false;
-}
-
-task tareaAlarmaCarrilAutoPrecaucion(){
-     while(banderaCarrilAutoPrecaucion){
-        PlayToneEx(1245, 300, 1, FALSE);
-        Wait(400);
-    }
-}
-
-void reproducirAlarmaCarrilAutoPrecaucion(){
-     banderaCarrilAutoPrecaucion = true;
-     start tareaAlarmaCarrilAutoPrecaucion;
-}
-
-void detenerAlarmaCarrilAutoPrecaucion(){
-     banderaCarrilAutoPrecaucion = false;
-}
-
-void encenderLuz(){
-     estadoLuz = 2;
-}
-
-void establecerLuzIntermitente(){
-     estadoLuz = 1;
-}
-
-void apagarLuz(){
-     estadoLuz = 0;
-}
-
-inline void imprimirStatus(){
+void imprimirStatus(){
      if (barreraXAbierta == true)
         TextOut(0,0, "Barrera X arriba");
      else
@@ -124,7 +31,7 @@ inline void imprimirStatus(){
 
 }
 
-inline void tareasCarrilAutoCerrado(){
+void tareasCarrilAutoCerrado(){
        reproducirAlarmaCarrilAutoCerrado();
        controlarBarrerasCarrilAutoCerrado(trenPorIzquierda);
        encenderLuz();
@@ -133,7 +40,7 @@ inline void tareasCarrilAutoCerrado(){
        TextOut(0,40, "Carril Auto Cerrado        ");
 }
 
-inline void tareasCarrilAutoPrecaucion(){
+void tareasCarrilAutoPrecaucion(){
        detenerAlarmaCarrilAutoCerrado();
        reproducirAlarmaCarrilAutoPrecaucion();
        controlarBarrerasCarrilAutoPrecaucion();
@@ -143,7 +50,7 @@ inline void tareasCarrilAutoPrecaucion(){
        TextOut(0,40, "Carril Auto Precaucion     ");
 }
 
-inline void tareasTrenEnMedio(bool desdeCarrilAutoPrecacucion){
+void tareasTrenEnMedio(const bool &desdeCarrilAutoPrecacucion){
        detenerAlarmaCarrilAutoPrecaucion();
        reproducirAlarmaCarrilAutoCerrado();
        controlarBarrerasTrenEnMedio(desdeCarrilAutoPrecacucion);
@@ -153,7 +60,7 @@ inline void tareasTrenEnMedio(bool desdeCarrilAutoPrecacucion){
        TextOut(0,40, "Tren En Medio              ");
 }
 
-inline void tareasCarrilAutoReabierto(){
+void tareasCarrilAutoReabierto(){
        detenerAlarmaCarrilAutoCerrado();
        controlarBarrerasCarrilAutoReabierto();
        apagarLuz();
@@ -162,14 +69,14 @@ inline void tareasCarrilAutoReabierto(){
        TextOut(0,40, "Carril Auto Reabierto      ");
 }
 
-inline void tareasTrenFuera(){
+void tareasTrenFuera(){
        controlarBarrerasTrenFuera(trenPorIzquierda);
 
        imprimirStatus();
        TextOut(0,40, "Tren Fuera!                ");
 }
 
-inline void inicializarPlataforma(){
+void inicializarPlataforma(){
 	SetSensorTouch(IN_1);
   SetSensorTouch(IN_2);
   SetSensorTouch(IN_3);
@@ -179,8 +86,5 @@ inline void inicializarPlataforma(){
   barreraYAbierta = true;
   barreraZAbierta = true;
   estadoAlarma = false;
-
   estadoLuz = 0;
 }
-
-
