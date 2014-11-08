@@ -1,0 +1,90 @@
+#include "acceso-sensores.h"
+#include "acciones-estados.h"
+
+const byte ESTADO_INICIAL = 0;
+const byte ESTADO_CARRIL_AUTO_CERRADO = 1;
+const byte ESTADO_CARRIL_AUTO_PRECAUCION = 2;
+const byte ESTADO_TREN_EN_MEDIO = 3;
+const byte ESTADO_CARRIL_AUTO_REABIERTO = 4;
+
+const long umbralMaximo = 3000;
+
+task main(){
+  inicializarPlataforma();
+	long tiempo_inicial = CurrentTick();
+
+	bool flag = FALSE;
+	byte proximo_estado = 0;
+
+	long tiempo_consumido = 0;
+	
+	byte estado = 0;
+  bool ultimaPulsacion = false;
+	while(true){
+		switch(estado){
+			case ESTADO_INICIAL:
+				if (SENSOR_1){
+           trenPorIzquierda = true;
+           proximo_estado = ESTADO_CARRIL_AUTO_CERRADO;
+           tareasCarrilAutoCerrado();
+           tiempo_inicial = CurrentTick();
+        }
+        
+				if (SENSOR_4){
+           trenPorIzquierda = false;
+           proximo_estado = ESTADO_CARRIL_AUTO_CERRADO;
+           tareasCarrilAutoCerrado();
+           tiempo_inicial = CurrentTick();
+        }
+
+				break;
+
+			case ESTADO_CARRIL_AUTO_CERRADO:
+           tiempo_consumido = CurrentTick() - tiempo_inicial;
+           if (tiempo_consumido > umbralMaximo){
+              tareasCarrilAutoPrecaucion();
+              proximo_estado = ESTADO_CARRIL_AUTO_PRECAUCION;
+           }
+           
+           if (leerSensorDos(trenPorIzquierda)){
+              detenerAlarmaCarrilAutoCerrado();
+              tareasTrenEnMedio();
+              proximo_estado = ESTADO_TREN_EN_MEDIO;
+           }
+           
+           break;
+
+     case ESTADO_CARRIL_AUTO_PRECAUCION:
+          if (leerSensorDos(trenPorIzquierda)){
+             detenerAlarmaCarrilAutoPrecaucion();
+             tareasTrenEnMedio();
+             proximo_estado = ESTADO_TREN_EN_MEDIO;
+          }
+          
+          break;
+
+     case ESTADO_TREN_EN_MEDIO:
+          if (leerSensorTres(trenPorIzquierda)){
+             tareasCarrilAutoReabierto();
+             proximo_estado = ESTADO_CARRIL_AUTO_REABIERTO;
+          }
+          
+          break;
+
+     case ESTADO_CARRIL_AUTO_REABIERTO:
+          if (leerSensorCuatro(trenPorIzquierda)){
+             ultimaPulsacion = true;
+          }
+          
+          if (ultimaPulsacion == true && leerSensorCuatro(trenPorIzquierda) == false){
+             tareasTrenFuera();
+             proximo_estado = ESTADO_INICIAL;
+             ultimaPulsacion = false;
+          }
+          
+          break;
+		}
+
+		estado = proximo_estado;
+	}
+}
