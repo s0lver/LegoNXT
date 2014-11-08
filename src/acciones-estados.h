@@ -17,10 +17,10 @@ void imprimirStatus(){
         TextOut(0,16, "Barrera Z abajo ");
 
 
-     if (estadoAlarma == true)
-        TextOut(0,24, "Alarma encendida");
+     if (estadoAlarmaCarrilAutoCerrado == true)
+        TextOut(0,24, "Alarma CAC encendida");
      else
-        TextOut(0,24, "Alarma apagada  ");
+        TextOut(0,24, "Alarma CAC apagada  ");
 
      if (estadoLuz == 0)
         TextOut(0,32, "Luz apagada     ");
@@ -28,7 +28,6 @@ void imprimirStatus(){
         TextOut(0,32, "Luz intermitente");
      else
         TextOut(0,32, "Luz encendida   ");
-
 }
 
 void tareasCarrilAutoCerrado(){
@@ -85,6 +84,6 @@ void inicializarPlataforma(){
   barreraXAbierta = true;
   barreraYAbierta = true;
   barreraZAbierta = true;
-  estadoAlarma = false;
+  estadoAlarmaCarrilAutoCerrado = false;
   estadoLuz = 0;
 }

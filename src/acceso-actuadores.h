@@ -1,10 +1,9 @@
-bool banderaCarrilAutoCerrado = false;
-bool banderaCarrilAutoPrecaucion = false;
+bool estadoAlarmaCarrilAutoPrecaucion;
+bool estadoAlarmaCarrilAutoCerrado;
 
 bool barreraXAbierta;
 bool barreraYAbierta;
 bool barreraZAbierta;
-bool estadoAlarma;
 bool trenPorIzquierda;
 
 byte estadoLuz;
@@ -48,37 +47,35 @@ void controlarBarrerasTrenFuera(bool trenPorIzquierda){
 }
 
 task tareaAlarmaCarrilAutoCerrado(){
-     while(banderaCarrilAutoCerrado){
+     while(estadoAlarmaCarrilAutoCerrado){
         PlayToneEx(1245, 100, 1, FALSE);
         Wait(200);
     }
 }
 
 void reproducirAlarmaCarrilAutoCerrado(){
-     banderaCarrilAutoCerrado = true;
-     estadoAlarma = true;
+     estadoAlarmaCarrilAutoCerrado = true;
      start tareaAlarmaCarrilAutoCerrado;
 }
 
 void detenerAlarmaCarrilAutoCerrado(){
-     banderaCarrilAutoCerrado = false;
-     estadoAlarma = false;
+     estadoAlarmaCarrilAutoCerrado = false;
 }
 
 task tareaAlarmaCarrilAutoPrecaucion(){
-     while(banderaCarrilAutoPrecaucion){
+     while(estadoAlarmaCarrilAutoPrecaucion){
         PlayToneEx(1245, 300, 1, FALSE);
         Wait(400);
     }
 }
 
 void reproducirAlarmaCarrilAutoPrecaucion(){
-     banderaCarrilAutoPrecaucion = true;
+     estadoAlarmaCarrilAutoPrecaucion = true;
      start tareaAlarmaCarrilAutoPrecaucion;
 }
 
 void detenerAlarmaCarrilAutoPrecaucion(){
-     banderaCarrilAutoPrecaucion = false;
+     estadoAlarmaCarrilAutoPrecaucion = false;
 }
 
 void encenderLuz(){
