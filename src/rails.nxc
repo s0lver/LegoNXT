@@ -48,7 +48,7 @@ task main(){
            
            if (leerSensorDos(trenPorIzquierda)){
               detenerAlarmaCarrilAutoCerrado();
-              tareasTrenEnMedio();
+              tareasTrenEnMedio(false);
               proximo_estado = ESTADO_TREN_EN_MEDIO;
            }
            
@@ -57,7 +57,7 @@ task main(){
      case ESTADO_CARRIL_AUTO_PRECAUCION:
           if (leerSensorDos(trenPorIzquierda)){
              detenerAlarmaCarrilAutoPrecaucion();
-             tareasTrenEnMedio();
+             tareasTrenEnMedio(true);
              proximo_estado = ESTADO_TREN_EN_MEDIO;
           }
           
