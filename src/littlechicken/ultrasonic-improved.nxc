@@ -6,13 +6,14 @@
 task main(){
     int distancia = 0;
     float nueva_potencia = 0;
+    float error = 0;
     
     SetSensorUltrasonic(ENTRADA_US);
     SetSensorLowspeed(ENTRADA_US);
     
     while(true){
         distancia = SensorUS(ENTRADA_US);
-        error = LIMITE - distancia;
+        error = distancia - LIMITE;
         nueva_potencia = K_P * error;
 
         OnFwd(OUT_BC, nueva_potencia);
