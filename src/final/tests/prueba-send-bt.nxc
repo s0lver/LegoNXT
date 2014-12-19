@@ -1,0 +1,145 @@
+#define MAILBOX   0
+#define CONN 0
+#define CHANNEL   1    // slave channel can be 1, 2 or 3
+#define MASTER    0    // master channel is always 0
+#define NAP 10  // milliseconds
+
+void btchannelcheck(int conn)
+{
+  int e = BluetoothStatus(conn);
+  string m;
+
+  if(e==NO_ERR) return;
+
+  TextOut(0, LCD_LINE3, "Bluetooth error", true);
+  NumOut(0,  LCD_LINE4, e);
+  TextOut(0, LCD_LINE8, "on channel -.");
+  NumOut(66, LCD_LINE8, conn);
+
+  if(conn==CHANNEL)
+  {
+    TextOut(0, LCD_LINE1, "Master NXT");
+    TextOut(0, LCD_LINE6, "please connect");
+    TextOut(0, LCD_LINE7, "the slave NXT");
+  }
+  else
+  {
+    TextOut(0, LCD_LINE1, "Slave NXT");
+    TextOut(0, LCD_LINE6, "please wait for");
+    TextOut(0, LCD_LINE7, "the master NXT");
+  }
+
+  Wait(11000);
+  Stop(true);
+}
+
+void slavecheck()   { btchannelcheck(MASTER);  }
+
+
+void btwaitfor(int conn)
+{
+  byte e=NO_ERR+1;
+  while(e!=NO_ERR)
+  {
+    e=BluetoothStatus(conn);
+
+    if(e==NO_ERR) break;
+    if(e==STAT_COMM_PENDING) continue;
+
+   TextOut(0, LCD_LINE2, "Bluetooth error:", true);
+   NumOut(30, LCD_LINE4, e);
+
+   switch(e)
+   {
+     case ERR_COMM_CHAN_NOT_READY:
+          TextOut(0, LCD_LINE6, "NXT bluetooth");
+          TextOut(0, LCD_LINE7, "not connected!");
+          break;
+
+     case ERR_COMM_BUS_ERR:
+          TextOut(0, LCD_LINE6, "bus error:");
+          TextOut(0, LCD_LINE7, "please reboot");
+          break;
+    }
+    Wait(7000);
+    Stop(true);
+  }
+}
+
+void sendtomaster(string msg)
+{
+  byte mbx=MAILBOX+10;
+  btwaitfor(MASTER);
+  SendMessage(mbx, msg);
+  btwaitfor(MASTER);
+}
+
+string receivefrommaster()
+{
+  string msg;
+  btwaitfor(MASTER);
+  ReceiveMessage(MAILBOX, true, msg);
+  btwaitfor(MASTER);
+  return msg;
+}
+
+ task receive(){
+ int buffer=99;
+ while(true){
+ ReceiveRemoteNumber(0, false, buffer);
+ ReceiveRemoteNumber(0, false, buffer);
+ ReceiveRemoteNumber(0, false, buffer);
+ ReceiveRemoteNumber(0, false, buffer);
+ ReceiveRemoteNumber(0, false, buffer);
+  NumOut(0,8,buffer);
+
+
+ NumOut(0, 32, CurrentTick());
+ }
+ }
+
+ task send(){
+ SendResponseString(0, "This is a test");
+ }
+
+ task main(){
+// Precedes(send,receive);
+ Precedes(receive);
+ /*string r, m, tmp;
+ int i = 0, j;
+
+  for(;;)
+  {
+         btwaitfor(MASTER);
+         //ReceiveMessage(MAILBOX, false, r);
+         ReceiveRemoteString(0, false, r);
+
+         // -- lenght of message string (zero means "no message received"):
+         j = StrLen(r);
+
+         // -- print to screen only if there is a message
+    if(j!=0)
+    {
+      TextOut(0, LCD_LINE5, "                ");
+      TextOut(0, LCD_LINE5, r);
+    }
+
+// -- build some message to send out (and print to screen before sending):
+    tmp = NumToStr(i);
+    m = StrCat("msg", tmp);
+    TextOut(54, LCD_LINE1, m);
+
+// -- send the message via bluetooth channel to the master NXT:
+byte mbx=MAILBOX+10;
+  btwaitfor(MASTER);
+  SendMessage(mbx, "siii");
+  btwaitfor(MASTER);
+
+// -- have a small nap (to not to quickly drain batteries)...
+    Wait(NAP);
+
+
+// -- update the counter, and continue looping:
+    i++;
+  }      */
+ }

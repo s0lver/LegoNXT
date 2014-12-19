@@ -1,0 +1,50 @@
+#include "protocol.h"
+
+#define NAP 10  // milliseconds
+
+task main()
+{
+  string comandoDesdeServer, respuestaHaciaServer, tmp;
+  int i = 0, longitudMensaje;
+  int i3 =0, i4 = 0;
+  slavecheck();
+
+  TextOut(0, LCD_LINE1, "sending:");
+  TextOut(0, LCD_LINE4, "receiving:");
+
+  for(;;)
+  {
+    comandoDesdeServer = receivefrommaster();
+
+    longitudMensaje = StrLen(comandoDesdeServer);
+
+    // El lego ha podido leer un msj desde el servidor
+    if(longitudMensaje!=0)
+    {
+      TextOut(0, LCD_LINE5, "                ");
+      TextOut(0, LCD_LINE5, comandoDesdeServer);
+      // El lego lo identifica, procesa...
+      if (strcmp(comandoDesdeServer, "5") == 0){
+         respuestaHaciaServer = NumToStr(i3%2);
+         i3++;
+      }
+      else if (strcmp(comandoDesdeServer, "8") == 0)
+      {
+respuestaHaciaServer = NumToStr(i4%2);
+         i4++;
+      }
+      else{
+           respuestaHaciaServer = "ok";
+      }
+
+       TextOut(54, LCD_LINE1, respuestaHaciaServer);
+       
+       // El lego emite una respuesta hacia el servidor
+       sendtomaster(respuestaHaciaServer);
+    }
+
+    Wait(NAP);
+    ResetSleepTimer();
+    i++;
+  }
+}

@@ -1,0 +1,32 @@
+task receive(){
+ string buffer="hola";
+ int tam = 0;
+ while(true){
+            char r = ReceiveRemoteString(MAILBOX1, false, buffer);
+            string tmp_r = "a";
+            tmp_r[0] = r;
+            TextOut(0,LCD_LINE7,tmp_r);
+            NumOut(10,LCD_LINE7,StrToNum(tmp_r));
+            tam = strlen(buffer);
+            if (tam != 0){
+               TextOut(0,LCD_LINE1,buffer);
+               //SendResponseString(0, "ABCDEF");
+               SendRemoteString(0, 0, "ABC");
+               TextOut(0,LCD_LINE6,"Si respondi");
+            }else{
+            TextOut(0,LCD_LINE6,"NO respondi");
+            }
+            NumOut(0,LCD_LINE3,tam);
+
+            NumOut(30, LCD_LINE4, CurrentTick());
+            Wait(500);
+ }
+}
+
+ task send(){
+ SendResponseString(0, "This is a test");
+ }
+
+ task main(){
+ Precedes(receive);
+ }

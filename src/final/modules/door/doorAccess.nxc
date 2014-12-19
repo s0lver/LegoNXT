@@ -1,0 +1,353 @@
+#include "NXCDefs.h"
+#include "protocol.h"
+#define NAP 10
+
+int x = 30, y = 30;
+int val, val2, val3, val4, flag, pointer;
+int alerta = 0, alarm = 0, security = 0;
+int a = 20, state = 0, start1 = 1;
+int id, action, identifier, hour, minutes;
+string comandoDesdeServer, tp0, tp1, tp2, tp3, tp4, send;
+int currentTime = 0, startTime=800, endTime=2000;
+long timer;
+
+void validar(){
+   if(val == 3 && val2 == 5 && val3 == 9 && val4 == 1){
+      ClearScreen();
+      TextOut(7,50,"Code correct");
+      Wait(1000);
+      start1 = 0;
+      flag = 1;
+   }
+   else{
+      alerta += 1;
+      flag = 0;
+   }
+}
+void unlock(){
+   if(val == 9 && val2 == 9 && val3 == 9 && val4 == 9){
+      ClearScreen();
+      TextOut(7,50,"Code correct");
+      Wait(1000);
+      start1 = 0;
+      flag = 1;
+   }
+   else{
+      alerta += 1;
+      if(alerta >= 4){
+        ClearScreen();
+        TextOut(7,50,"System Unlock");
+      }
+      flag = 0;
+   }
+}
+void sound(){
+  while(alerta >= 3) {
+    PlaySound(SOUND_DOUBLE_BEEP);
+    Wait(1000);
+  }
+}
+void check(int idOp){
+   switch(idOp){
+       case 1:
+          if(id == 5){
+             send = NumToStr(state);
+             sendtomaster(send);
+          }
+          if(id == 8){
+             send = NumToStr(alarm);
+             sendtomaster(send);
+          }
+          break;
+       case 2:
+          if(id == 1 && identifier == 0){
+             send = "1";
+             sendtomaster(send);
+          }
+          if(id == 1 && identifier == 1 && currentTime < endTime){
+             send = "1";
+             sendtomaster(send);
+          }
+          else{
+               alerta = 3;
+               send = "Alerta de seguridad";
+               sendtomaster(send);
+          }
+
+          break;
+       case 3:
+          if(id == 9 && identifier == 5 && action == 1 && state == 0){
+             send = "1";
+             TextOut(10,10, send);
+             sendtomaster(send);
+             RotateMotor(OUT_A,25,100);
+             state = 1;
+          }
+          else{
+               if(id == 9 && identifier == 5 && action == 1 && state == 1){
+                 send = "La puerta ya esta abierta";
+                 sendtomaster(send);
+               }
+               else{
+                 if(id == 9 && identifier == 5 && action == 0 && state == 1){
+                   send = "1";
+                   sendtomaster(send);
+                   state = 0;
+                   RotateMotor(OUT_A,25,-100);
+                 }
+                 else{
+                   if(id == 9 && identifier == 5 && action == 0 && state == 0){
+                      send = "La puerta ya esta cerrada";
+                      sendtomaster(send);
+                    }
+                 }
+               }
+          }
+          break;
+       case 5:
+          if(id == 6){
+             currentTime = hour;
+             string send = "1";
+             sendtomaster(send);
+          }
+          break;
+       case 7:
+          if(id == 7 && identifier == 5 && action == 0){
+             startTime = hour;
+             send = "1";
+             sendtomaster(send);
+          }
+          if(id == 7 && identifier == 5 && action == 1){
+             endTime = hour;
+             send = "1";
+             sendtomaster(send);
+          }
+          break;
+   }
+}
+void token(string &comandoDesdeServer){
+     switch(StrLen(comandoDesdeServer)){
+          case 1:
+               tp0 = SubStr(comandoDesdeServer, 0, 1);
+               id = StrToNum(tp0);
+               check(1);
+               break;
+          case 2:
+               tp0 = SubStr(comandoDesdeServer, 0, 1);
+               tp1 = SubStr(comandoDesdeServer, 1, 1);
+               id = StrToNum(comandoDesdeServer);
+               identifier = StrToNum(comandoDesdeServer);
+               check(2);
+               break;
+          case 3:
+               tp0 = SubStr(comandoDesdeServer, 0, 1);
+               tp1 = SubStr(comandoDesdeServer, 1, 1);
+               tp2 = SubStr(comandoDesdeServer, 2, 1);
+               id = StrToNum(tp0);
+               identifier = StrToNum(tp1);
+               action = StrToNum(tp2);
+               check(3);
+               break;
+
+          case 5:
+               tp0 = SubStr(comandoDesdeServer, 0, 1);
+               tp1 = SubStr(comandoDesdeServer, 1, 4);
+               id = StrToNum(tp0);
+               hour = StrToNum(tp1);
+               check(5);
+               break;
+          case 7:
+               tp0 = SubStr(comandoDesdeServer, 0, 1);
+               tp1 = SubStr(comandoDesdeServer, 1, 1);
+               tp2 = SubStr(comandoDesdeServer, 2, 1);
+               tp3 = SubStr(comandoDesdeServer, 3, 4);
+               id = StrToNum(tp0);
+               identifier = StrToNum(tp1);
+               action = StrToNum(tp2);
+               hour = StrToNum(tp3);
+               check(7);
+               break;
+
+   }
+   tp0 = "";
+   tp1 = "";
+   tp2 = "";
+   tp3 = "";
+   tp4 = "";
+}
+task beep(){
+   while(true){
+      sound();
+   }
+}
+task codeAccess(){
+    int cont=0, aux = 0;
+       PlaySound(SOUND_DOUBLE_BEEP);
+   	   TextOut(20,50,"Enter Code");
+   	   NumOut(x,y,0); NumOut(40,y,0); NumOut(50,y,0); NumOut(60,y,0);
+   	   StartTask(beep);
+   	while(alarm == 1){
+   	   int bandera = 0;
+      	if(ButtonPressed(BTNLEFT, false)){
+        	cont-=1;
+        	bandera += 1;
+        }
+      	if(ButtonPressed(BTNRIGHT, false)){
+        	cont+=1;
+        	bandera += 1;
+        }
+      	if(cont > 9)
+        	cont = 0;
+      	if(cont < 0)
+        	cont = 9;
+
+       Wait(200);
+       if(bandera > 0){
+      	  NumOut(x, y, cont);
+       }
+      	if(ButtonPressed(BTNCENTER, false)){
+            Wait(30);
+          	if(aux == 0){
+            	val = cont;
+            	aux += 1;
+          	}
+          	else{
+            	if(aux == 1){
+            		val2 = cont;
+               		aux += 1;
+            	}
+            	else{
+                	if(aux == 2){
+            	    	val3 = cont;
+                		aux += 1;
+                	}
+                	else{
+                    	val4 = cont;
+                    	if(security == 1){
+                        unlock();
+                        if(flag == 1){
+                   			  alarm = 1;
+                   			  alerta = 0;
+                		    }
+                		    else{
+                          alarm = 1;
+                        }
+                      }
+                      else{
+                    	  validar();
+                    	  if(flag == 1){
+                   			  alarm = 1;
+                		    }
+                    	  else{
+                         if(alerta < 3){
+                        	 aux = 0;
+                        	 x = 20;
+                        	 ClearScreen();
+                        	 TextOut(20,50,"Enter Code");
+                        	 NumOut(30,y,0); NumOut(40,y,0); NumOut(50,y,0); NumOut(60,y,0);
+                         }
+                         else{
+                           if(alerta >= 3){
+                             security = 1;
+                             aux = 0;
+                             x = 20;
+                             ClearScreen();
+                        	   TextOut(20,50,"Security Code");
+                        	   NumOut(30,y,0); NumOut(40,y,0); NumOut(50,y,0); NumOut(60,y,0);
+                        	 }
+                         }
+                    	}
+                    }
+                	}
+            	}
+        	}
+        	x += 10;
+        	cont = 1;
+        	if(security != 1)
+             NumOut(x,y,cont);
+    	}     	
+	}
+}
+task hilo(){
+   int flag = 0;
+   while(true){
+        flag = Sensor(IN_2);
+        if(flag == 1){
+           Off(OUT_A);
+        }
+   }
+}
+task reciver(){
+   slavecheck();
+   while(1){
+      comandoDesdeServer = receivefrommaster();
+      token(comandoDesdeServer);
+      Wait(10);
+      ResetSleepTimer();
+      //comandoDesdeServer = "";
+   }
+}
+task main(){
+   StartTask(reciver);
+  int sens, sens3, sens4, pointAccess = 0;
+  long time;
+  SetSensorTouch(IN_1);
+  SetSensorTouch(IN_2);
+  SetSensorTouch(IN_3);
+  SetSensorTouch(IN_4);
+  StartTask(hilo);
+  time = CurrentTick();
+  while(1){
+    sens = Sensor(IN_1);
+    sens3 = Sensor(IN_3);
+    sens4 = Sensor(IN_4);
+    if(sens == 1){
+        if(state == 1){
+           RotateMotor(OUT_A,25,-100);
+           state = 0;
+        }
+        else{
+           if(state == 0){
+             RotateMotor(OUT_A,25,100);
+             state = 1;
+           }
+        }
+    }
+    if(sens4 == 1){
+       alerta = 0;
+       alarm = 0;
+    }
+    if(sens3 == 1){
+      if(state == 1){
+        RotateMotor(OUT_A,25,-100);
+        state = 0;
+      }
+      else{
+        currentTime = currentTime + timer;
+        if(currentTime >= startTime && currentTime <= endTime){
+           RotateMotor(OUT_A,25,100);
+           state = 1;
+        }
+        else{
+          start1 = 1;
+          pointAccess = 0;
+          alarm = 1;
+          alerta = 0;
+          x = 30;
+          y = 30;
+          StartTask(codeAccess);
+          while(pointAccess == 0){
+             if(start1 == 0 && (Sensor(IN_3) == 1)){
+                RotateMotor(OUT_A,25,100);
+                state = 1;
+                alarm = 1;
+                pointAccess = 1;
+                ClearScreen();
+             }
+          }
+        }
+      }
+      
+    }
+  }
+}
